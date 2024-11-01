@@ -4,18 +4,80 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        figure {
+           background-color: blue;
+           witdth: 200px;
+            transform: rotate(45deg);}
+        figure img{ 
+            transform: translateX(100px) translateY(-30px);
+            filter: grayscale(100%);
+        }
+        figure img{
+
+            background-color: #146d37;
+            transition-duration: 2s;
+            transition-timing-function: ease-out;
+            transition-delay: 0s;
+            }
+figure img:hover {
+            background-color:#60b946;
+            width: 150%;
+        }
+        figure img {
+animation-iteration-count: infinite;
+animation-name: bounceIn;
+animation-play-state: running;
+animation-duration: 2s;
+animation-timing-function: ease-out;
+animation-delay: 1s;
+}
+figure img:hover {
+animation-play-state: paused;
+}
+div.at-container {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 100%;
+	}
+	.at-item {
+		width: 250px; height: 50px;
+         background:url(https://bit.ueh.edu.vn/wp-content/uploads/2017/06/BIT_logo.png) no-repeat; 
+		
+		animation-name: bg-pan-bl;
+		animation-duration: 2.2s;
+		animation-timing-function: ease-in;
+		animation-delay: 0s;
+		animation-iteration-count: infinite;
+		animation-direction: normal;
+		animation-fill-mode: none;
+			
+		/* shorthand
+		animation: bg-pan-bl 2.2s ease-in 0s infinite normal none;*/
+	}
+	@keyframes bg-pan-bl {
+			
+		0% {
+			background-position:100% 100%;
+			width:0px;
+			height:0px;
+		}
+		100% {
+			width:500px;
+			height:100px;
+		}
+	}
+    </style>
 </head>
 <body>
     <figure>
         <img width="200"
-        src="https://bit.ueh.edu.vn/
-        
-        wp-
-        content/uploads/2017/06/BIT_
-        
-        logo.png">
+        src="https://bit.ueh.edu.vn/wp-content/uploads/2017/06/BIT_logo.png">
         <figcaption>BIT</figcaption>
         </figure>
-        
+        <div class='at-container'>
+            <div class='at-item' ></div>
+        </div>
 </body>
 </html>
